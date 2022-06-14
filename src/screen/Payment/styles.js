@@ -1,0 +1,77 @@
+import {StyleSheet} from 'react-native';
+
+export default StyleSheet.create({
+  textHeader: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  textType1: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'black',
+  },
+  textType2: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'grey',
+  },
+  textType3: {
+    textAlign: 'left',
+    fontSize: 14,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'grey',
+  },
+  layoutMenuPayment: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  cardPayment: {
+    marginLeft: 20,
+    marginTop: 30,
+    marginBottom: 50,
+    height: 200,
+    borderRadius: 10,
+    backgroundColor: 'white',
+    width: '90%',
+    alignItems: 'center',
+  },
+  cardPersonal: {
+    marginLeft: 20,
+    marginTop: 30,
+    marginBottom: 50,
+    height: 400,
+    borderRadius: 10,
+    backgroundColor: 'white',
+    width: '90%',
+    alignItems: 'center',
+  },
+  input: {
+    marginTop: 10,
+    paddingLeft: 30,
+    width: '90%',
+    borderWidth: 1,
+    height: 40,
+    borderRadius: 8,
+  },
+  button: {
+    width: '90%',
+    backgroundColor: '#5F2EEA',
+    marginLeft: 20,
+    height: 50,
+    paddingTop: 10,
+    alignItems: 'center',
+    marginBottom: 50,
+    borderRadius: 15,
+  },
+  textButton: {
+    color: 'white',
+  },
+});
