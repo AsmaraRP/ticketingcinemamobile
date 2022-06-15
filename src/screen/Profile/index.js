@@ -25,7 +25,7 @@ function Profile(props) {
         <Text>INFO</Text>
         <Image
           style={styles.photo}
-          source={require('../../assets/logoblue.png')}
+          source={require('../../assets/movie1.png')}
         />
         <Text style={styles.textHeader}>NAMA</Text>
         <Text style={styles.textType2}>Moviegoers</Text>
@@ -33,7 +33,7 @@ function Profile(props) {
           <Text style={styles.textButton}>Logut</Text>
         </TouchableOpacity>
       </View>
-      <Text style={styles.textHeader}>Account Setting</Text>
+      <Text style={styles.textHeader}>Account Settings</Text>
       <View style={styles.cardPersonal}>
         <Text style={styles.textHeader}>Detail Information</Text>
         <Text style={styles.textType3}>Full Name</Text>
@@ -49,9 +49,17 @@ function Profile(props) {
       <View style={styles.cardPersonal}>
         <Text style={styles.textHeader}>Account and Privacy</Text>
         <Text style={styles.textType3}>New Password</Text>
-        <TextInput style={styles.input} placeholder="new password" />
+        <TextInput
+          style={styles.input}
+          placeholder="new password"
+          secureTextEntry={true}
+        />
         <Text style={styles.textType3}>Confirm Password</Text>
-        <TextInput style={styles.input} placeholder="confirm password" />
+        <TextInput
+          style={styles.input}
+          placeholder="confirm password"
+          secureTextEntry={true}
+        />
       </View>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.textButton}>Update Changes</Text>

@@ -31,6 +31,11 @@ function Login(props) {
       screen: 'Register',
     });
   };
+  const handleForgot = () => {
+    props.navigation.navigate('AuthScreen', {
+      screen: 'Forgot',
+    });
+  };
   return (
     <View>
       <Image
@@ -51,6 +56,7 @@ function Login(props) {
       <TextInput
         style={styles.inputform}
         placeholder="Write your password"
+        secureTextEntry={true}
         onChangeText={text => handleChangeForm(text, 'password')}
       />
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
@@ -58,7 +64,7 @@ function Login(props) {
       </TouchableOpacity>
       <View style={styles.textSet}>
         <Text style={styles.textOption}>Forgot your password?</Text>
-        <TouchableOpacity style={styles.directText}>
+        <TouchableOpacity style={styles.directText} onPress={handleForgot}>
           <Text style={styles.textButton}>Reset now</Text>
         </TouchableOpacity>
       </View>

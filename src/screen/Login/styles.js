@@ -15,6 +15,7 @@ export default StyleSheet.create({
   text: {
     marginTop: 20,
     marginLeft: 30,
+    marginRight: 30,
     fontSize: 20,
     color: '#8692A6',
   },

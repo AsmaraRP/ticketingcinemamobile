@@ -17,26 +17,118 @@ function Home(props) {
         style={styles.logo}
         source={require('../../assets/banner_img.png')}
       />
-      <View style={styles.layoutMenu}>
-        <View>
-          <Text style={styles.textMenu}>Now Showing</Text>
+      <View style={styles.menu1}>
+        <View style={styles.layoutMenu}>
+          <View>
+            <Text style={styles.textMenu}>Now Showing</Text>
+          </View>
+          <TouchableOpacity>
+            <Text style={styles.textMenu} onPress={handleViewall}>
+              view all
+            </Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Text style={styles.textMenu} onPress={handleViewall}>
-            view all
-          </Text>
-        </TouchableOpacity>
+        <ScrollView style={styles.movieList} horizontal={true}>
+          <View style={styles.cardMovie}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.cardMovie}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.cardMovie}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
-      <View style={styles.layoutMenu2}>
-        <View>
-          <Text style={styles.textMenu}>Upcoming Movies</Text>
+      <View style={styles.menu2}>
+        <View style={styles.layoutMenu2}>
+          <View>
+            <Text style={styles.textMenu}>Upcoming Movies</Text>
+          </View>
+          <TouchableOpacity>
+            <Text style={styles.textMenu} onPress={handleViewall}>
+              view all
+            </Text>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity>
-          <Text style={styles.textMenu} onPress={handleViewall}>
-            view all
-          </Text>
-        </TouchableOpacity>
+        <ScrollView style={styles.monthList} horizontal={true}>
+          <TouchableOpacity style={styles.buttonMonth}>
+            <Text style={styles.buttonTextMonth}>January</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonMonthActive}>
+            <Text style={styles.buttonTextMonthActive}>February</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonMonth}>
+            <Text style={styles.buttonTextMonth}>March</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonMonth}>
+            <Text style={styles.buttonTextMonth}>April</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.buttonMonth}>
+            <Text style={styles.buttonTextMonth}>June</Text>
+          </TouchableOpacity>
+        </ScrollView>
+        <ScrollView style={styles.movieList} horizontal={true}>
+          <View style={styles.cardMovie2}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.cardMovie2}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.cardMovie2}>
+            <Image
+              style={styles.movieImage}
+              source={require('../../assets/movie1.png')}
+            />
+            <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+            <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+            <TouchableOpacity style={styles.buttonCard}>
+              <Text>Detail</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
+
       <Footer />
     </ScrollView>
   );

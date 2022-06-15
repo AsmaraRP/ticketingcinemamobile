@@ -5,6 +5,8 @@ const Stack = createNativeStackNavigator();
 
 import Login from '../screen/Login';
 import Register from '../screen/Register';
+import Forgot from '../screen/Forgot';
+import Reset from '../screen/Reset';
 
 export default function AuthNavigator() {
   return (
@@ -19,6 +21,20 @@ export default function AuthNavigator() {
       <Stack.Screen
         component={Register}
         name="Register"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        component={Forgot}
+        name="Forgot"
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        component={Reset}
+        name="Reset"
         options={{
           headerShown: false,
         }}

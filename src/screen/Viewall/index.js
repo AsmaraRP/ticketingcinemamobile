@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -9,21 +9,101 @@ import {
 } from 'react-native';
 import Footer from '../../components/Footer';
 import styles from './styles';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 function Viewall() {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState(null);
+  const [items, setItems] = useState([
+    {label: 'A~z', value: 'ASC'},
+    {label: 'Z~A', value: 'DESC'},
+  ]);
   return (
     <ScrollView>
       <Text style={styles.textHeader}>List Movie</Text>
       <View style={styles.layoutMenu}>
-        <View>
-          <TextInput placeholder="SORT" style={styles.menuViewSort} />
+        <View style={styles.sort}>
+          <DropDownPicker
+            style={styles.sortDrop}
+            open={open}
+            value={value}
+            items={items}
+            setOpen={setOpen}
+            setValue={setValue}
+            setItems={setItems}
+            placeholder="SORT"
+          />
         </View>
         <TextInput
           placeholder="Seacrh Movie Name"
           style={styles.menuViewSearch}
         />
       </View>
-
+      <ScrollView style={styles.monthList} horizontal={true}>
+        <TouchableOpacity style={styles.buttonMonth}>
+          <Text style={styles.buttonTextMonth}>January</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonMonthActive}>
+          <Text style={styles.buttonTextMonthActive}>February</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonMonth}>
+          <Text style={styles.buttonTextMonth}>March</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonMonth}>
+          <Text style={styles.buttonTextMonth}>April</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonMonth}>
+          <Text style={styles.buttonTextMonth}>June</Text>
+        </TouchableOpacity>
+      </ScrollView>
+      <View style={styles.movieList} horizontal={true}>
+        <View style={styles.cardMovie}>
+          <Image
+            style={styles.movieImage}
+            source={require('../../assets/movie1.png')}
+          />
+          <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+          <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+          <TouchableOpacity style={styles.buttonCard}>
+            <Text>Detail</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.cardMovie}>
+          <Image
+            style={styles.movieImage}
+            source={require('../../assets/movie1.png')}
+          />
+          <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+          <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+          <TouchableOpacity style={styles.buttonCard}>
+            <Text>Detail</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.movieList} horizontal={true}>
+        <View style={styles.cardMovie}>
+          <Image
+            style={styles.movieImage}
+            source={require('../../assets/movie1.png')}
+          />
+          <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+          <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+          <TouchableOpacity style={styles.buttonCard}>
+            <Text>Detail</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.cardMovie}>
+          <Image
+            style={styles.movieImage}
+            source={require('../../assets/movie1.png')}
+          />
+          <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
+          <Text style={styles.textCard2}>Action, Sci-Fi</Text>
+          <TouchableOpacity style={styles.buttonCard}>
+            <Text>Detail</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
       <Footer />
     </ScrollView>
   );

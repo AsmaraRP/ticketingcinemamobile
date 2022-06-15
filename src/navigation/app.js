@@ -9,10 +9,10 @@ const Drawer = createDrawerNavigator();
 import Home from '../screen/Home';
 import Viewall from '../screen/Viewall';
 import Detail from '../screen/Detail';
+import Ticket from '../screen/Ticket';
 import Profile from '../screen/Profile';
 import Payment from '../screen/Payment';
-import Managemovie from '../screen/Managemovie';
-import Manageschedule from '../screen/Manageschedule';
+import History from '../screen/History';
 import DrawerContent from '../components/DrawerContent';
 import Header from '../components/Header';
 
@@ -38,23 +38,23 @@ function DetailNavigator() {
     </Stack.Navigator>
   );
 }
-function ManagemovieNavigator() {
+function PaymentNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        component={Managemovie}
-        name="Managemovie"
+        component={Payment}
+        name="Payment"
         options={{headerShown: false}}
       />
     </Stack.Navigator>
   );
 }
-function ManagescheduleNavigator() {
+function HistoryNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        component={Manageschedule}
-        name="Manageschedule"
+        component={History}
+        name="History"
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -71,23 +71,23 @@ function ProfileNavigator() {
     </Stack.Navigator>
   );
 }
-function PaymentNavigator() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        component={Payment}
-        name="Payment"
-        options={{headerShown: false}}
-      />
-    </Stack.Navigator>
-  );
-}
 function ViewallNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen
         component={Viewall}
         name="Viewall"
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+}
+function TicketNavigator() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        component={Ticket}
+        name="Ticket"
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -146,10 +146,10 @@ export default function AppNavigator() {
         }}
       />
       <Drawer.Screen
-        component={ManagemovieNavigator}
-        name="ManagemovieNavigator"
+        component={PaymentNavigator}
+        name="PaymentNavigator"
         options={{
-          title: 'Managemovie',
+          title: 'Payment',
           header: props => <Header {...props} />,
           drawerIcon: ({size, color}) => (
             <Icon name="user" size={size} color={color} />
@@ -157,10 +157,21 @@ export default function AppNavigator() {
         }}
       />
       <Drawer.Screen
-        component={ManagescheduleNavigator}
-        name="ManagescheduleNavigator"
+        component={HistoryNavigator}
+        name="HistoryNavigator"
         options={{
-          title: 'Manageschedule',
+          title: 'History',
+          header: props => <Header {...props} />,
+          drawerIcon: ({size, color}) => (
+            <Icon name="user" size={size} color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        component={TicketNavigator}
+        name="TicketNavigator"
+        options={{
+          title: 'Ticket',
           header: props => <Header {...props} />,
           drawerIcon: ({size, color}) => (
             <Icon name="user" size={size} color={color} />

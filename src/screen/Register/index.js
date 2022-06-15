@@ -54,6 +54,7 @@ function Register(props) {
       <Text style={styles.label}>Password</Text>
       <TextInput
         style={styles.inputform}
+        secureTextEntry={true}
         // onChangeText={onChangeNumber}
         // value={number}
         placeholder="Write your password"

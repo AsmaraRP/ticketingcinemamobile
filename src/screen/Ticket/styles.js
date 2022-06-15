@@ -1,0 +1,66 @@
+import {StyleSheet} from 'react-native';
+
+export default StyleSheet.create({
+  textType1: {
+    fontSize: 12,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'grey',
+  },
+  textType2: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  textType3: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    marginRight: 100,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  layoutMenuTicket: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  cardTicket: {
+    marginLeft: 20,
+    marginTop: 30,
+    paddingTop: 20,
+    marginBottom: 5,
+    height: 250,
+    borderRadius: 10,
+    backgroundColor: 'white',
+    width: '90%',
+    alignItems: 'center',
+  },
+  photo: {
+    marginTop: 10,
+    marginButtom: 20,
+    width: 200,
+    height: 200,
+    resizeMode: 'stretch',
+  },
+  cardDetail: {
+    marginLeft: 20,
+    paddingTop: 20,
+    marginBottom: 20,
+    height: 450,
+    borderRadius: 10,
+    backgroundColor: 'white',
+    width: '90%',
+    alignItems: 'center',
+  },
+  layoutMenuTotal: {
+    borderWidth: 1,
+    marginTop: 40,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+});
