@@ -4,10 +4,20 @@ import Footer from '../../components/Footer';
 import styles from './styles';
 
 function History(props) {
+  const handleTicket = () => {
+    props.navigation.navigate('ProfileNavigator', {
+      screen: 'Ticket',
+    });
+  };
+  const handleProfile = () => {
+    props.navigation.navigate('ProfileNavigator', {
+      screen: 'Profile',
+    });
+  };
   return (
     <ScrollView>
       <View style={styles.layoutMenuHistory}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleProfile}>
           <Text style={styles.textType2}>Detail Account</Text>
         </TouchableOpacity>
         <TouchableOpacity>
@@ -21,7 +31,7 @@ function History(props) {
         />
         <Text style={styles.textType3}>Tuesday, 07 July 2020 - 04:30pm</Text>
         <Text style={styles.textType4}>Spider-Man : Homecoming</Text>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={handleTicket}>
           <Text style={styles.textButton}>Ticket in Active</Text>
         </TouchableOpacity>
       </View>
@@ -32,6 +42,7 @@ function History(props) {
         />
         <Text style={styles.textType3}>Tuesday, 07 July 2020 - 04:30pm</Text>
         <Text style={styles.textType4}>Avenger: End Game</Text>
+        <View style={styles.hr} />
         <TouchableOpacity style={styles.buttonUsed}>
           <Text style={styles.textButton}>Ticket used</Text>
         </TouchableOpacity>

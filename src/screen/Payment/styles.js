@@ -6,19 +6,21 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'black',
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   textType1: {
     fontSize: 20,
     marginTop: 15,
     marginLeft: 15,
     color: 'black',
+    fontFamily: 'Mulish-Regular',
   },
   textType2: {
     fontSize: 20,
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   textType3: {
     textAlign: 'left',
@@ -26,6 +28,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   layoutMenuPayment: {
     backgroundColor: 'white',
@@ -66,6 +69,7 @@ export default StyleSheet.create({
   textSet: {
     textAlign: 'center',
     flexDirection: 'row',
+    fontFamily: 'Mulish-Regular',
   },
   textOption: {
     alignContent: 'center',
@@ -74,17 +78,20 @@ export default StyleSheet.create({
     fontSize: 15,
     color: 'black',
     flex: 3,
+    fontFamily: 'Mulish-Regular',
   },
   directText: {
     alignContent: 'center',
     marginTop: 50,
     marginLeft: -100,
     flex: 2,
+    fontFamily: 'Mulish-Regular',
   },
   textButtonDirect: {
     fontSize: 15,
     color: '#5F2EEA',
     marginBottom: 10,
+    fontFamily: 'Mulish-Regular',
   },
   cardPersonal: {
     marginLeft: 20,
@@ -115,6 +122,7 @@ export default StyleSheet.create({
   },
   textWarning: {
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   button: {
     width: '90%',
@@ -128,5 +136,6 @@ export default StyleSheet.create({
   },
   textButton: {
     color: 'white',
+    fontFamily: 'Mulish-Regular',
   },
 });

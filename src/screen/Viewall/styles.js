@@ -6,7 +6,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'black',
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   layoutMenu: {
     paddingTop: 30,
@@ -53,6 +53,7 @@ export default StyleSheet.create({
   },
   buttonTextMonth: {
     color: '#5F2EEA',
+    fontFamily: 'Mulish-Regular',
   },
   buttonMonthActive: {
     marginLeft: 20,
@@ -66,6 +67,7 @@ export default StyleSheet.create({
   },
   buttonTextMonthActive: {
     color: '#FFFF',
+    fontFamily: 'Mulish-Regular',
   },
   cardMovie: {
     padding: 10,
@@ -90,10 +92,11 @@ export default StyleSheet.create({
   },
   textCard: {
     fontSize: 13,
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   textCard2: {
     fontSize: 11,
+    fontFamily: 'Mulish-Regular',
   },
   buttonCard: {
     marginTop: 10,

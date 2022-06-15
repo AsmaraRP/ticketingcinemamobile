@@ -13,7 +13,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'black',
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   textType1: {
     fontSize: 20,
@@ -21,6 +21,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     marginRight: 20,
     color: 'black',
+    fontFamily: 'Mulish-Regular',
   },
   textType2: {
     fontSize: 20,
@@ -28,6 +29,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     marginRight: 20,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   cardMain: {
     marginLeft: 80,
@@ -120,6 +122,7 @@ export default StyleSheet.create({
   scheduleText: {
     marginTop: 10,
     fontSize: 10,
+    fontFamily: 'Mulish-Regular',
   },
   scheduleTime: {
     marginTop: 30,
@@ -129,6 +132,7 @@ export default StyleSheet.create({
   },
   scheduleTimeContent: {
     marginRight: 20,
+    fontFamily: 'Mulish-Regular',
   },
   priceContent: {
     marginTop: 30,
@@ -138,9 +142,11 @@ export default StyleSheet.create({
   },
   priceText: {
     marginRight: 90,
+    fontFamily: 'Mulish-Regular',
   },
   priceText2: {
     fontWeight: 'bold',
+    fontFamily: 'Mulish-Regular',
   },
   buttonCard: {
     backgroundColor: '#5F2EEA',
@@ -153,5 +159,6 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: 'white',
+    fontFamily: 'Mulish-Regular',
   },
 });

@@ -8,13 +8,14 @@ export default StyleSheet.create({
     marginTop: 50,
     marginLeft: 30,
     fontSize: 15,
+    fontFamily: 'Mulish-Regular',
     color: '#A0A3BD',
   },
   textMotto2: {
     marginTop: 10,
     marginLeft: 30,
     fontSize: 40,
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
     color: '#5F2EEA',
   },
   logo: {
@@ -41,6 +42,7 @@ export default StyleSheet.create({
   },
   textMenu: {
     color: '#5F2EEA',
+    fontFamily: 'Mulish-Bold',
   },
   layoutMenu2: {
     paddingTop: 50,
@@ -74,10 +76,11 @@ export default StyleSheet.create({
   },
   textCard: {
     fontSize: 13,
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   textCard2: {
     fontSize: 11,
+    fontFamily: 'Mulish-Regular',
   },
   buttonCard: {
     marginTop: 10,
@@ -98,6 +101,7 @@ export default StyleSheet.create({
   },
   buttonTextMonth: {
     color: '#5F2EEA',
+    fontFamily: 'Mulish-Regular',
   },
   buttonMonthActive: {
     marginLeft: 20,
@@ -111,6 +115,7 @@ export default StyleSheet.create({
   },
   buttonTextMonthActive: {
     color: '#FFFF',
+    fontFamily: 'Mulish-Regular',
   },
   cardMovie2: {
     padding: 10,

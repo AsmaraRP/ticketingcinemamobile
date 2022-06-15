@@ -11,13 +11,18 @@ import Footer from '../../components/Footer';
 import styles from './styles';
 import DropDownPicker from 'react-native-dropdown-picker';
 
-function Viewall() {
+function Viewall(props) {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    {label: 'A~z', value: 'ASC'},
+    {label: 'A~Z', value: 'ASC'},
     {label: 'Z~A', value: 'DESC'},
   ]);
+  const handleDetail = () => {
+    props.navigation.navigate('HomeNavigator', {
+      screen: 'Detail',
+    });
+  };
   return (
     <ScrollView>
       <Text style={styles.textHeader}>List Movie</Text>
@@ -64,7 +69,7 @@ function Viewall() {
           />
           <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
           <Text style={styles.textCard2}>Action, Sci-Fi</Text>
-          <TouchableOpacity style={styles.buttonCard}>
+          <TouchableOpacity style={styles.buttonCard} onPress={handleDetail}>
             <Text>Detail</Text>
           </TouchableOpacity>
         </View>
@@ -75,7 +80,7 @@ function Viewall() {
           />
           <Text style={styles.textCard}>Spider-Man : Home Coming</Text>
           <Text style={styles.textCard2}>Action, Sci-Fi</Text>
-          <TouchableOpacity style={styles.buttonCard}>
+          <TouchableOpacity style={styles.buttonCard} onPress={handleDetail}>
             <Text>Detail</Text>
           </TouchableOpacity>
         </View>

@@ -8,18 +8,21 @@ export default StyleSheet.create({
     color: 'black',
     borderBottomWidth: 1,
     borderBottomColor: '#5F2EEA',
+    fontFamily: 'Mulish-Regular',
   },
   textType2: {
     fontSize: 20,
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   textType3: {
     fontSize: 12,
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   textType4: {
     fontSize: 20,
@@ -27,6 +30,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Mulish-Regular',
   },
   layoutMenuHistory: {
     backgroundColor: 'white',
@@ -76,5 +80,10 @@ export default StyleSheet.create({
   },
   textButton: {
     color: 'white',
+    fontFamily: 'Mulish-Regular',
+  },
+  hr: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
   },
 });

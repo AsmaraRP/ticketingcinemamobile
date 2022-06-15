@@ -6,6 +6,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   textType2: {
     fontSize: 20,
@@ -13,6 +14,7 @@ export default StyleSheet.create({
     marginLeft: 15,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Mulish-Regular',
   },
   textType3: {
     fontSize: 20,
@@ -21,12 +23,7 @@ export default StyleSheet.create({
     marginRight: 100,
     color: 'black',
     fontWeight: 'bold',
-  },
-  layoutMenuTicket: {
-    backgroundColor: 'white',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    padding: 10,
+    fontFamily: 'Mulish-Regular',
   },
   cardTicket: {
     marginLeft: 20,
@@ -55,12 +52,6 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     width: '90%',
     alignItems: 'center',
-  },
-  layoutMenuTotal: {
-    borderWidth: 1,
-    marginTop: 40,
-    flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 10,
   },
 });

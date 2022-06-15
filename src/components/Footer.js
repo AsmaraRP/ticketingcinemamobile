@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
 
 export default function Footer(props) {
   return (
@@ -34,10 +35,10 @@ export default function Footer(props) {
       </View>
       <Text style={styles.textFooter2}>Follow Us</Text>
       <View style={styles.sosmedFooter}>
-        <Text>S1</Text>
-        <Text>S2</Text>
-        <Text>S3</Text>
-        <Text>S4</Text>
+        <Icon name="facebook" />
+        <Icon name="instagram" />
+        <Icon name="twitter" />
+        <Icon name="linkedin" />
       </View>
       <Text style={styles.textFooter1}>
         © 2020 Tickitz. All Rights Reserved.

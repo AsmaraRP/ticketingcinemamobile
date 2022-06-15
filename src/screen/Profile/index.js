@@ -11,13 +11,18 @@ import Footer from '../../components/Footer';
 import styles from './styles';
 
 function Profile(props) {
+  const handleHistory = () => {
+    props.navigation.navigate('ProfileNavigator', {
+      screen: 'History',
+    });
+  };
   return (
     <ScrollView>
       <View style={styles.layoutMenuProfile}>
         <TouchableOpacity>
           <Text style={styles.textType1}>Detail Account</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleHistory}>
           <Text style={styles.textType2}>Order History</Text>
         </TouchableOpacity>
       </View>

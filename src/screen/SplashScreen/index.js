@@ -28,7 +28,7 @@ function SplashScreen(props) {
           style={styles.logo}
           source={require('../../assets/logoblue.png')}
         />
-        <Text>Get your Ticket Easly</Text>
+        <Text>Get your Ticket Easily</Text>
       </View>
       <View style={styles.container} />
     </>

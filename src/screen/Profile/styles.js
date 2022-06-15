@@ -6,7 +6,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'black',
-    fontWeight: 'bold',
+    fontFamily: 'Mulish-Bold',
   },
   textType1: {
     fontSize: 20,
@@ -15,12 +15,14 @@ export default StyleSheet.create({
     color: 'black',
     borderBottomWidth: 1,
     borderBottomColor: '#5F2EEA',
+    fontFamily: 'Mulish-Regular',
   },
   textType2: {
     fontSize: 20,
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   textType3: {
     textAlign: 'left',
@@ -28,6 +30,7 @@ export default StyleSheet.create({
     marginTop: 15,
     marginLeft: 15,
     color: 'grey',
+    fontFamily: 'Mulish-Regular',
   },
   layoutMenuProfile: {
     backgroundColor: 'white',
@@ -35,7 +38,7 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
   },
-  cardHistory: {
+  cardProfile: {
     marginLeft: 20,
     marginTop: 30,
     paddingTop: 20,
@@ -94,5 +97,6 @@ export default StyleSheet.create({
   },
   textButton: {
     color: 'white',
+    fontFamily: 'Mulish-Regular',
   },
 });

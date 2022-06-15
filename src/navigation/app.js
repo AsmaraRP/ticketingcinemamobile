@@ -13,6 +13,7 @@ import Ticket from '../screen/Ticket';
 import Profile from '../screen/Profile';
 import Payment from '../screen/Payment';
 import History from '../screen/History';
+import Order from '../screen/Order';
 import DrawerContent from '../components/DrawerContent';
 import Header from '../components/Header';
 
@@ -24,37 +25,24 @@ function HomeNavigator() {
         name="Home"
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-  );
-}
-function DetailNavigator() {
-  return (
-    <Stack.Navigator>
+      <Stack.Screen
+        component={Viewall}
+        name="Viewall"
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         component={Detail}
         name="Detail"
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-  );
-}
-function PaymentNavigator() {
-  return (
-    <Stack.Navigator>
+      <Stack.Screen
+        component={Order}
+        name="Order"
+        options={{headerShown: false}}
+      />
       <Stack.Screen
         component={Payment}
         name="Payment"
-        options={{headerShown: false}}
-      />
-    </Stack.Navigator>
-  );
-}
-function HistoryNavigator() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        component={History}
-        name="History"
         options={{headerShown: false}}
       />
     </Stack.Navigator>
@@ -68,23 +56,11 @@ function ProfileNavigator() {
         name="Profile"
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-  );
-}
-function ViewallNavigator() {
-  return (
-    <Stack.Navigator>
       <Stack.Screen
-        component={Viewall}
-        name="Viewall"
+        component={History}
+        name="History"
         options={{headerShown: false}}
       />
-    </Stack.Navigator>
-  );
-}
-function TicketNavigator() {
-  return (
-    <Stack.Navigator>
       <Stack.Screen
         component={Ticket}
         name="Ticket"
@@ -113,65 +89,10 @@ export default function AppNavigator() {
         }}
       />
       <Drawer.Screen
-        component={ViewallNavigator}
-        name="ViewallNavigator"
-        options={{
-          title: 'Viewall',
-          header: props => <Header {...props} />,
-          drawerIcon: ({size, color}) => (
-            <Icon name="user" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        component={DetailNavigator}
-        name="DetailNavigator"
-        options={{
-          title: 'Detail',
-          header: props => <Header {...props} />,
-          drawerIcon: ({size, color}) => (
-            <Icon name="user" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
         component={ProfileNavigator}
         name="ProfileNavigator"
         options={{
           title: 'Profile',
-          header: props => <Header {...props} />,
-          drawerIcon: ({size, color}) => (
-            <Icon name="user" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        component={PaymentNavigator}
-        name="PaymentNavigator"
-        options={{
-          title: 'Payment',
-          header: props => <Header {...props} />,
-          drawerIcon: ({size, color}) => (
-            <Icon name="user" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        component={HistoryNavigator}
-        name="HistoryNavigator"
-        options={{
-          title: 'History',
-          header: props => <Header {...props} />,
-          drawerIcon: ({size, color}) => (
-            <Icon name="user" size={size} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        component={TicketNavigator}
-        name="TicketNavigator"
-        options={{
-          title: 'Ticket',
           header: props => <Header {...props} />,
           drawerIcon: ({size, color}) => (
             <Icon name="user" size={size} color={color} />

@@ -17,6 +17,11 @@ function Detail(props) {
     {label: 'Jakarta', value: 'Jakarta'},
     {label: 'Bandung', value: 'Bandung'},
   ]);
+  const handleBook = () => {
+    props.navigation.navigate('HomeNavigator', {
+      screen: 'Order',
+    });
+  };
   return (
     <ScrollView>
       <View style={styles.menu1}>
@@ -78,12 +83,12 @@ function Detail(props) {
             open={open}
             date={date}
             mode="date"
-            onConfirm={date => {
+            onConfirm={time => {
               setOpen(false);
-              setDate(date);
-              const dd = String(date.getDate()).padStart(2, '0');
-              const mm = String(date.getMonth() + 1).padStart(2, '0');
-              const yyyy = date.getFullYear();
+              setDate(time);
+              const dd = String(time.getDate()).padStart(2, '0');
+              const mm = String(time.getMonth() + 1).padStart(2, '0');
+              const yyyy = time.getFullYear();
               const today = mm + '/' + dd + '/' + yyyy;
               setTitle(today);
             }}
@@ -132,7 +137,7 @@ function Detail(props) {
               <Text style={styles.priceText2}>Rp. 50.000/seat</Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.buttonCard}>
+          <TouchableOpacity style={styles.buttonCard} onPress={handleBook}>
             <Text style={styles.buttonText}>Book Now</Text>
           </TouchableOpacity>
         </View>
@@ -164,7 +169,7 @@ function Detail(props) {
               <Text style={styles.priceText2}>Rp. 50.000/seat</Text>
             </View>
           </View>
-          <TouchableOpacity style={styles.buttonCard}>
+          <TouchableOpacity style={styles.buttonCard} onPress={handleBook}>
             <Text style={styles.buttonText}>Book Now</Text>
           </TouchableOpacity>
         </View>

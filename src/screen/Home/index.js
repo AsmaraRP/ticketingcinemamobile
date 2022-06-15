@@ -5,7 +5,7 @@ import styles from './styles';
 
 function Home(props) {
   const handleViewall = () => {
-    props.navigation.navigate('AppScreen', {
+    props.navigation.navigate('HomeNavigator', {
       screen: 'Viewall',
     });
   };
@@ -22,10 +22,8 @@ function Home(props) {
           <View>
             <Text style={styles.textMenu}>Now Showing</Text>
           </View>
-          <TouchableOpacity>
-            <Text style={styles.textMenu} onPress={handleViewall}>
-              view all
-            </Text>
+          <TouchableOpacity onPress={handleViewall}>
+            <Text style={styles.textMenu}>view all</Text>
           </TouchableOpacity>
         </View>
         <ScrollView style={styles.movieList} horizontal={true}>
@@ -69,10 +67,8 @@ function Home(props) {
           <View>
             <Text style={styles.textMenu}>Upcoming Movies</Text>
           </View>
-          <TouchableOpacity>
-            <Text style={styles.textMenu} onPress={handleViewall}>
-              view all
-            </Text>
+          <TouchableOpacity onPress={handleViewall}>
+            <Text style={styles.textMenu}>view all</Text>
           </TouchableOpacity>
         </View>
         <ScrollView style={styles.monthList} horizontal={true}>
