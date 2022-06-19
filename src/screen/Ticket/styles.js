@@ -25,6 +25,28 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Mulish-Regular',
   },
+  textType4: {
+    fontSize: 20,
+    marginTop: 15,
+    marginLeft: 15,
+    fontWeight: 'bold',
+    fontFamily: 'Mulish-Regular',
+    color: '#5F2EEA',
+  },
+  layoutMenuTicket: {
+    backgroundColor: 'white',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  layoutMenuTotal: {
+    borderWidth: 1,
+    marginTop: 30,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 10,
+    marginBottom: 20,
+  },
   cardTicket: {
     marginLeft: 20,
     marginTop: 30,
@@ -53,5 +75,17 @@ export default StyleSheet.create({
     width: '90%',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  textSpace: {
+    width: 100,
+  },
+  textSpace2: {
+    width: 170,
+  },
+  textSpace3: {
+    width: 130,
+  },
+  textSpace4: {
+    width: 50,
   },
 });

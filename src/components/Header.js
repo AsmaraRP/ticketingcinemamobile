@@ -5,12 +5,17 @@ export default function Header(props) {
   const openDrawer = () => {
     props.navigation.openDrawer();
   };
+  const handleHome = () => {
+    props.navigation.navigate('HomeNavigator', {
+      screen: 'Home',
+    });
+  };
 
   return (
     <View style={styles.header}>
-      <View>
+      <TouchableOpacity onPress={handleHome}>
         <Image source={require('../assets/logoblue.png')} />
-      </View>
+      </TouchableOpacity>
       <TouchableOpacity onPress={openDrawer}>
         <Image style={styles.logo} source={require('../assets/nav.png')} />
       </TouchableOpacity>

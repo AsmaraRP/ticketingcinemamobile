@@ -1,11 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import Footer from '../../components/Footer';
 import DropDownPicker from 'react-native-dropdown-picker';
 import DatePicker from 'react-native-date-picker';
 import styles from './styles';
+import axios from '../..//utils/axios';
+import {useSelector} from 'react-redux';
 
 function Detail(props) {
+  const movie = useSelector(state => state.movie.data);
+  const data = movie[0];
+  console.log(data);
   const [openCity, setOpenCity] = useState(false);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -22,6 +27,7 @@ function Detail(props) {
       screen: 'Order',
     });
   };
+
   return (
     <ScrollView>
       <View style={styles.menu1}>
@@ -29,45 +35,49 @@ function Detail(props) {
           <View style={styles.cardMovie}>
             <Image
               style={styles.movieImage}
-              source={require('../../assets/movie1.png')}
+              source={{
+                uri: `https://res.cloudinary.com/djanbjfvx/image/upload/v1650922804/${data.image}`,
+              }}
             />
           </View>
         </View>
         <View style={styles.form}>
-          <Text style={styles.textHeader}>JUDUL</Text>
-          <Text style={styles.textType2}>ACTION dll</Text>
+          <Text style={styles.textHeader}>{data.name}</Text>
+          <Text style={styles.textType2}>{data.category}</Text>
           <View style={styles.layoutMenu}>
             <View>
               <Text style={styles.textType2}>Release date</Text>
-              <Text style={styles.textType1}>Juni 29, 2000</Text>
+              <Text style={styles.textType1}>
+                {data.releaseDate.split('T')[0]}
+              </Text>
             </View>
             <View>
               <Text style={styles.textType2}>Directed by</Text>
-              <Text style={styles.textType1}>Jon Wates</Text>
+              <Text style={styles.textType1}>
+                {data.director.length >= 10
+                  ? data.director.substring(0, 10) + '...'
+                  : data.director}
+              </Text>
             </View>
           </View>
           <View style={styles.layoutMenu}>
             <View>
               <Text style={styles.textType2}>Duration</Text>
-              <Text style={styles.textType1}>2 hr 13 min</Text>
+              <Text style={styles.textType1}>{data.duration}</Text>
             </View>
             <View>
               <Text style={styles.textType2}>Cast</Text>
-              <Text style={styles.textType1}>Tom Holand</Text>
+              <Text style={styles.textType1}>
+                {data.cast.length >= 10
+                  ? data.cast.substring(0, 10) + '...'
+                  : data.cast}
+              </Text>
             </View>
           </View>
         </View>
         <View style={styles.synopsis}>
           <Text style={styles.textType1}>Synopsis</Text>
-          <Text style={styles.textType2}>
-            Thrilled by his experience with the Avengers, Peter returns home,
-            where he lives with his Aunt May, under the watchful eye of his new
-            mentor Tony Stark, Peter tries to fall back into his normal daily
-            routine - distracted by thoughts of proving himself to be more than
-            just your friendly neighborhood Spider-Man - but when the Vulture
-            emerges as a new villain, everything that Peter holds most important
-            will be threatened.
-          </Text>
+          <Text style={styles.textType2}>{data.synopsis}</Text>
         </View>
       </View>
       <View style={styles.menu2}>

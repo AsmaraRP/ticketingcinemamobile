@@ -129,4 +129,48 @@ export default StyleSheet.create({
     borderRadius: 6,
     alignItems: 'center',
   },
+  comment: {
+    alignItems: 'center',
+    height: 350,
+    width: '90%',
+    marginLeft: 20,
+    paddingTop: 30,
+  },
+  commentTitle1: {
+    fontFamily: 'Mulish-Regular',
+    fontSize: 16,
+  },
+  commentTitle2: {
+    fontFamily: 'Mulish-Bold',
+    fontSize: 35,
+    color: '#5F2EEA',
+  },
+  commentform: {
+    borderWidth: 1,
+    width: '90%',
+    marginTop: 20,
+    fontFamily: 'Mulish-Regular',
+    paddingLeft: 20,
+    borderRadius: 10,
+  },
+  commentbutton: {
+    width: '90%',
+    alignItems: 'center',
+    paddingTop: 10,
+    backgroundColor: '#5F2EEA',
+    marginTop: 20,
+    height: 50,
+    borderRadius: 10,
+  },
+  commentbuttontext: {
+    color: 'white',
+    fontFamily: 'Mulish-Bold',
+  },
+  commentTitle3: {
+    marginTop: 20,
+    fontFamily: 'Mulish-Regular',
+    fontSize: 15,
+    width: '80%',
+    textAlign: 'center',
+  },
 });

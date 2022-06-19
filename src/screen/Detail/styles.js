@@ -47,6 +47,11 @@ export default StyleSheet.create({
     borderRadius: 6,
     alignItems: 'center',
   },
+  movieImage: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
+  },
   movie: {
     marginTop: 20,
     width: '60%',

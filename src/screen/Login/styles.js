@@ -1,6 +1,10 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
+  main: {
+    backgroundColor: 'white',
+    height: '100%',
+  },
   logo: {
     marginTop: 20,
     marginLeft: 30,

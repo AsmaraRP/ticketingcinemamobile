@@ -1,7 +1,14 @@
 import React from 'react';
 import MainStackNavigator from './src/navigation';
+import {Provider} from 'react-redux';
+import stores from './src/stores';
+const {persistor, store} = stores;
 
 function App() {
-  return <MainStackNavigator />;
+  return (
+    <Provider store={store}>
+      <MainStackNavigator />
+    </Provider>
+  );
 }
 export default App;

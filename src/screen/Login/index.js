@@ -37,7 +37,7 @@ function Login(props) {
     });
   };
   return (
-    <View>
+    <View style={styles.main}>
       <Image
         style={styles.logo}
         source={require('../../assets/logoblue.png')}

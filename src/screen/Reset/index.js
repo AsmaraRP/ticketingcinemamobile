@@ -16,7 +16,7 @@ function Reset(props) {
     });
   };
   return (
-    <ScrollView>
+    <ScrollView style={styles.main}>
       <Image
         style={styles.logo}
         source={require('../../assets/logoblue.png')}

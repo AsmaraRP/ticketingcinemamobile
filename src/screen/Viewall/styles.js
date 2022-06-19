@@ -82,9 +82,15 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   movieList: {
-    overflow: 'scroll',
-    flexDirection: 'row',
+    // overflow: 'scroll',
+    // flexDirection: 'row',
+    // flexWrap: 'nowrap',
     paddingLeft: 20,
+  },
+  nomore: {
+    color: '#5F2EEA',
+    marginLeft: 120,
+    marginBottom: 30,
   },
   movieImage: {
     width: '100%',

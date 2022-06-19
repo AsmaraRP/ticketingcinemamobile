@@ -102,7 +102,7 @@ function Order(props) {
           <View>
             <Text style={styles.textMenu}>One ticket price</Text>
           </View>
-          <View style={styles.textSpace}>
+          <View style={styles.textSpace2}>
             <Text> </Text>
           </View>
           <View>
@@ -113,7 +113,7 @@ function Order(props) {
           <View>
             <Text style={styles.textMenu}>Seat choosed</Text>
           </View>
-          <View style={styles.textSpace}>
+          <View style={styles.textSpace3}>
             <Text> </Text>
           </View>
           <View>
@@ -124,7 +124,7 @@ function Order(props) {
           <View>
             <Text style={styles.textMenu3}>Total Payment</Text>
           </View>
-          <View style={styles.textSpace}>
+          <View style={styles.textSpace4}>
             <Text> </Text>
           </View>
           <View>

@@ -66,6 +66,15 @@ export default StyleSheet.create({
   textSpace: {
     width: 100,
   },
+  textSpace2: {
+    width: 170,
+  },
+  textSpace3: {
+    width: 150,
+  },
+  textSpace4: {
+    width: 130,
+  },
   layoutMenuInfo: {
     paddingTop: 10,
     backgroundColor: 'white',
