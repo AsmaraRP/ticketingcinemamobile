@@ -30,6 +30,16 @@ const movie = (state = initialState, action) => {
         msg: action.payload.response.data.msg,
       };
     }
+    case 'dataOrder': {
+      return {
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload.data.data,
+        pageInfo: action.payload.data.pagination,
+        msg: action.payload.data.msg,
+      };
+    }
     default: {
       return state;
     }

@@ -83,6 +83,7 @@ export default StyleSheet.create({
     marginTop: 30,
     width: '60%',
     backgroundColor: '#FFFFF',
+    marginBottom: 50,
   },
   sortDrop: {
     borderColor: 'grey',
@@ -98,6 +99,11 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
   },
+  nomore: {
+    color: '#5F2EEA',
+    marginLeft: 120,
+    marginBottom: 30,
+  },
   setdatetext: {
     color: 'black',
   },
@@ -109,9 +115,28 @@ export default StyleSheet.create({
     paddingLeft: 30,
     marginBottom: 10,
   },
+  mainSchedule: {
+    backgroundColor: '#F5F6F8',
+  },
+  timenonactive: {
+    color: 'grey',
+    fontFamily: 'Mulish-bold',
+    fontWeight: 'bold',
+  },
+  timeactive: {
+    color: 'black',
+    fontFamily: 'Mulish-bold',
+    fontWeight: 'bold',
+  },
+  timechosed: {
+    color: '#5F2EEA',
+    fontFamily: 'Mulish-bold',
+    fontWeight: 'bold',
+  },
   scheduleCard: {
-    marginTop: 20,
+    marginTop: 10,
     marginBottom: 30,
+    marginLeft: 30,
     padding: 20,
     width: 300,
     height: 300,
@@ -126,7 +151,7 @@ export default StyleSheet.create({
   },
   scheduleText: {
     marginTop: 10,
-    fontSize: 10,
+    fontSize: 15,
     fontFamily: 'Mulish-Regular',
   },
   scheduleTime: {
@@ -148,9 +173,12 @@ export default StyleSheet.create({
   priceText: {
     marginRight: 90,
     fontFamily: 'Mulish-Regular',
+    color: 'black',
+    fontWeight: 'bold',
   },
   priceText2: {
     fontWeight: 'bold',
+    color: '#5F2EEA',
     fontFamily: 'Mulish-Regular',
   },
   buttonCard: {
@@ -164,6 +192,6 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: 'white',
-    fontFamily: 'Mulish-Regular',
+    fontFamily: 'Mulish-bold',
   },
 });

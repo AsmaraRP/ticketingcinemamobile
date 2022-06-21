@@ -3,12 +3,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import axios from '../../utils/axios';
+import {useDispatch} from 'react-redux';
+import {getUserById} from '../../stores/actions/user';
 
 function Login(props) {
+  const dispatch = useDispatch();
   const [form, setForm] = useState({
     email: '',
     password: '',
   });
+  const [error, setError] = useState(false);
+  const [msg, setMsg] = useState('');
   const handleChangeForm = (text, name) => {
     setForm({...form, [name]: text});
   };
@@ -18,12 +23,17 @@ function Login(props) {
       const result = await axios.post('auth/login', form);
       await AsyncStorage.setItem('id', result.data.data.id);
       await AsyncStorage.setItem('token', result.data.data.token);
+      await AsyncStorage.setItem('email', form.email);
       await AsyncStorage.setItem('refreshToken', result.data.data.refreshToken);
+      const user = await dispatch(getUserById(result.data.data.id));
+      const myJSON = JSON.stringify(user);
+      await AsyncStorage.setItem('user', myJSON);
       props.navigation.navigate('AppScreen', {
         screen: 'Home',
       });
     } catch (error) {
-      console.log(error);
+      setError(true);
+      setMsg(error.response.data.msg);
     }
   };
   const handleRegister = () => {
@@ -59,6 +69,7 @@ function Login(props) {
         secureTextEntry={true}
         onChangeText={text => handleChangeForm(text, 'password')}
       />
+      {error ? <Text style={styles.error}>{msg}</Text> : null}
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>

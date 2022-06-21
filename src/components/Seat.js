@@ -75,8 +75,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 7,
     marginVertical: 3,
     padding: 3,
+    paddingLeft: 20,
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: 'white',
   },
   leftSide: {
     flex: 6,

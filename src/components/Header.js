@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default function Header(props) {
-  const openDrawer = () => {
+  const openDrawer = async () => {
     props.navigation.openDrawer();
   };
   const handleHome = () => {

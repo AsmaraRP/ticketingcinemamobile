@@ -25,24 +25,30 @@ export default StyleSheet.create({
     fontFamily: 'Mulish-Regular',
   },
   label: {
-    marginTop: 30,
+    marginTop: 20,
     marginLeft: 30,
-    fontSize: 20,
+    fontSize: 15,
     color: '#4E4B66',
     fontFamily: 'Mulish-Regular',
   },
   inputform: {
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 30,
-    fontSize: 20,
+    paddingLeft: 30,
+    fontSize: 15,
     color: '#8692A6',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#4E4B66',
     backgroundColor: '#ffff',
     width: '85%',
-    height: 50,
+    height: 40,
     fontFamily: 'Mulish-Regular',
+  },
+  error: {
+    color: 'red',
+    textAlign: 'center',
+    marginTop: 10,
   },
   button: {
     backgroundColor: '#5F2EEA',
@@ -58,7 +64,7 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: '#ffff',
-    fontFamily: 'Mulish-Regular',
+    fontFamily: 'Mulish-Bold',
   },
   textSet: {
     textAlign: 'center',
@@ -66,7 +72,7 @@ export default StyleSheet.create({
   },
   textOption: {
     alignContent: 'center',
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 30,
     fontSize: 15,
     color: 'black',
@@ -75,7 +81,7 @@ export default StyleSheet.create({
   },
   directText: {
     alignContent: 'center',
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 30,
     flex: 2,
     fontFamily: 'Mulish-Regular',

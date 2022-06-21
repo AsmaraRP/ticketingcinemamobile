@@ -224,6 +224,7 @@ function Viewall(props) {
         data={data}
         keyExtractor={item => item.id}
         ListHeaderComponent={ListHeader}
+        numColumns="2"
         renderItem={({item}) => (
           <View style={styles.movieList} key={item.id}>
             <View style={styles.cardMovie}>

@@ -6,12 +6,17 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
-  ViewPropTypes,
 } from 'react-native';
 import Footer from '../../components/Footer';
 import styles from './styles';
+import {useSelector} from 'react-redux';
 
 function Payment(props) {
+  const dataPayment = JSON.parse(props.route.params);
+  const user = useSelector(state => state.user.data);
+  console.log(user);
+  console.log(dataPayment);
+
   return (
     <ScrollView>
       <View style={styles.layoutMenuPayment}>
@@ -19,7 +24,9 @@ function Payment(props) {
           <Text style={styles.textType2}>Total Payment</Text>
         </View>
         <View>
-          <Text style={styles.textType1}>$30.00</Text>
+          <Text style={styles.textType1}>
+            {'Rp ' + dataPayment.totalPayment}
+          </Text>
         </View>
       </View>
       <Text style={styles.textHeader}>Payment Method</Text>

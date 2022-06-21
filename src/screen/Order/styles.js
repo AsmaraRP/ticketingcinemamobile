@@ -3,10 +3,17 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   textHeader: {
     fontSize: 20,
-    marginTop: 15,
+    paddingTop: 40,
     marginLeft: 15,
     color: 'black',
     fontFamily: 'Mulish-Bold',
+  },
+  backseat: {
+    backgroundColor: 'white',
+  },
+  backoption: {
+    backgroundColor: 'white',
+    paddingBottom: 20,
   },
   seatCard: {
     backgroundColor: 'white',
@@ -77,10 +84,19 @@ export default StyleSheet.create({
   },
   layoutMenuInfo: {
     paddingTop: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
     backgroundColor: 'white',
     marginBottom: 10,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-between',
+    alignContent: 'space-between',
+  },
+  left: {
+    flex: 3,
+  },
+  right: {
+    flex: 2,
   },
   button: {
     width: '90%',

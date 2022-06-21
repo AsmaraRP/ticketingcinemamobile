@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
@@ -8,8 +8,13 @@ import {
   ScrollView,
 } from 'react-native';
 import styles from '../Login/styles';
+import axios from '../../utils/axios';
+import {useDispatch} from 'react-redux';
 
 function Register(props) {
+  const dispatch = useDispatch();
+  const [error, setError] = useState(false);
+  const [msg, setMsg] = useState('');
   const handleLogin = () => {
     props.navigation.navigate('AuthScreen', {
       screen: 'Login',
@@ -59,6 +64,7 @@ function Register(props) {
         // value={number}
         placeholder="Write your password"
       />
+      {error ? <Text style={styles.error}>{msg}</Text> : null}
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Sign up</Text>
       </TouchableOpacity>
