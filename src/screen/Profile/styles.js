@@ -32,6 +32,42 @@ export default StyleSheet.create({
     color: 'grey',
     fontFamily: 'Mulish-Regular',
   },
+  textProfile: {
+    fontFamily: 'Mulish-bold',
+    fontSize: 14,
+  },
+  textProfile2: {
+    fontFamily: 'Mulish-bold',
+    fontSize: 14,
+    color: 'red',
+  },
+  textUpload: {
+    fontFamily: 'Mulish-bold',
+    marginBottom: 10,
+    fontSize: 14,
+    color: '#5F2EEA',
+  },
+  buttonUpload: {
+    width: 50,
+    borderWidth: 1,
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  buttonUpload2: {
+    width: 150,
+    borderWidth: 1,
+    borderColor: '#5F2EEA',
+    marginBottom: 4,
+    alignItems: 'center',
+    borderRadius: 3,
+  },
+  buttonUpload3: {
+    width: 50,
+    borderColor: 'red',
+    borderWidth: 1,
+    alignItems: 'center',
+    borderRadius: 5,
+  },
   layoutMenuProfile: {
     backgroundColor: 'white',
     flexDirection: 'row',
@@ -43,7 +79,7 @@ export default StyleSheet.create({
     marginTop: 30,
     paddingTop: 20,
     marginBottom: 50,
-    height: 350,
+    height: 430,
     borderRadius: 10,
     backgroundColor: 'white',
     width: '90%',
@@ -51,7 +87,7 @@ export default StyleSheet.create({
   },
   photo: {
     marginTop: 20,
-    marginButtom: 20,
+    marginBottom: 10,
     width: 100,
     height: 100,
     borderRadius: 50,
@@ -98,5 +134,9 @@ export default StyleSheet.create({
   textButton: {
     color: 'white',
     fontFamily: 'Mulish-Regular',
+  },
+  warning: {
+    marginTop: 30,
+    color: 'red',
   },
 });

@@ -5,28 +5,26 @@ const initialState = {
   pageInfo: {},
   msg: '',
 };
-const movie = (state = initialState, action) => {
+const ticket = (state = initialState, action) => {
   switch (action.type) {
-    case 'GET_DATA_MOVIE_PENDING': {
-      return {...state, isLoading: true, isError: false};
+    case 'GET_DATA_BOOKING_PENDING': {
+      return {...state, isLoading: true, isError: false, msg: ''};
     }
-    case 'GET_DATA_MOVIE_FULFILLED': {
+    case 'GET_DATA_BOOKING_FULFILLED': {
       return {
         ...state,
         isLoading: false,
         isError: false,
         data: action.payload.data.data,
-        pageInfo: action.payload.data.pagination,
         msg: action.payload.data.msg,
       };
     }
-    case 'GET_DATA_MOVIE_REJECTED': {
+    case 'GET_DATA_BOOKING_REJECTED': {
       return {
         ...state,
         isLoading: false,
         isError: true,
         data: [],
-        pageInfo: {},
         msg: action.payload.response.data.msg,
       };
     }
@@ -36,4 +34,4 @@ const movie = (state = initialState, action) => {
   }
 };
 
-export default movie;
+export default ticket;

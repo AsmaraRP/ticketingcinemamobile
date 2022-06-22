@@ -12,7 +12,7 @@ import Seat from '../../components/Seat';
 import Footer from '../../components/Footer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './styles';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 function Order(props) {
   const listSeat = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -36,13 +36,15 @@ function Order(props) {
   const handlePayment = async () => {
     try {
       const email = await AsyncStorage.getItem('email');
+      const id = await AsyncStorage.getItem('id');
       const dataPayment = {
         dateBooking: dataOrder.dateBooking,
         timeBooking: dataOrder.timeBooking,
         totalPayment: dataOrder.price * selectedSeat.length,
         seat: selectedSeat,
-        paymentMethod: 'Midtrans',
+        scheduleId: dataOrder.scheduleId,
         email: email,
+        userId: id,
       };
       const myJSON = JSON.stringify(dataPayment);
       props.navigation.navigate('HomeNavigator', {

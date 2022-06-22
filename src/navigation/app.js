@@ -14,6 +14,7 @@ import Profile from '../screen/Profile';
 import Payment from '../screen/Payment';
 import History from '../screen/History';
 import Order from '../screen/Order';
+import Midtrans from '../screen/Midtrans';
 import DrawerContent from '../components/DrawerContent';
 import Header from '../components/Header';
 
@@ -43,6 +44,11 @@ function HomeNavigator() {
       <Stack.Screen
         component={Payment}
         name="Payment"
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        component={Midtrans}
+        name="Midtrans"
         options={{headerShown: false}}
       />
     </Stack.Navigator>

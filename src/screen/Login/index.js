@@ -12,7 +12,7 @@ function Login(props) {
     email: '',
     password: '',
   });
-  const [error, setError] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [msg, setMsg] = useState('');
   const handleChangeForm = (text, name) => {
     setForm({...form, [name]: text});
@@ -32,7 +32,7 @@ function Login(props) {
         screen: 'Home',
       });
     } catch (error) {
-      setError(true);
+      setIsError(true);
       setMsg(error.response.data.msg);
     }
   };
@@ -69,7 +69,7 @@ function Login(props) {
         secureTextEntry={true}
         onChangeText={text => handleChangeForm(text, 'password')}
       />
-      {error ? <Text style={styles.error}>{msg}</Text> : null}
+      {isError ? <Text style={styles.error}>{msg}</Text> : null}
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>

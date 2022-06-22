@@ -60,7 +60,7 @@ export default StyleSheet.create({
   },
   photo: {
     marginTop: 10,
-    marginButtom: 20,
+    marginBottom: 20,
     width: 200,
     height: 200,
     resizeMode: 'stretch',

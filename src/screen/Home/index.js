@@ -32,6 +32,7 @@ function Home(props) {
     try {
       const resultMovie = await axios.get(`movie?page=1&limit=${limit}`);
       setData(resultMovie.data.data);
+      console.log(resultMovie);
     } catch (error) {
       console.log(error.response);
     }

@@ -83,7 +83,7 @@ export default StyleSheet.create({
     marginTop: 30,
     width: '60%',
     backgroundColor: '#FFFFF',
-    marginBottom: 50,
+    marginBottom: 150,
   },
   sortDrop: {
     borderColor: 'grey',

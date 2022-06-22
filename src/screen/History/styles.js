@@ -51,7 +51,7 @@ export default StyleSheet.create({
   },
   photo: {
     marginTop: 20,
-    marginButtom: 20,
+    marginBottom: 20,
     width: 100,
     height: 30,
     resizeMode: 'stretch',

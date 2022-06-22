@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import Footer from '../../components/Footer';
 import DropDownPicker from 'react-native-dropdown-picker';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import DatePicker from 'react-native-date-picker';
 import styles from './styles';
 import axios from '../..//utils/axios';
@@ -31,6 +30,7 @@ function Detail(props) {
       setRefresh(false);
       setLoading(false);
       setLoadMore(false);
+      setLocation(location === null ? '' : location);
       const resultSchedule = await axios.get(
         `schedule?limit=${limit}&searchLocation=${location}`,
       );
@@ -47,6 +47,9 @@ function Detail(props) {
   useEffect(() => {
     getdataSchedule();
   }, [limit]);
+  useEffect(() => {
+    getdataSchedule();
+  }, [location]);
   const [openCity, setOpenCity] = useState(false);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -55,8 +58,7 @@ function Detail(props) {
   const [items, setItems] = useState([
     {label: 'Banyuwangi', value: 'Banyuwangi'},
     {label: 'Jember', value: 'Jember'},
-    {label: 'Jakarta', value: 'Jakarta'},
-    {label: 'Bandung', value: 'Bandung'},
+    {label: 'Surabaya', value: 'Surabaya'},
   ]);
   const [dataOrder, setDataOrder] = useState({
     movieId: data.id,
@@ -165,6 +167,10 @@ function Detail(props) {
               onConfirm={time => {
                 setOpen(false);
                 setDate(time);
+                setDataOrder({
+                  ...dataOrder,
+                  dateBooking: time.toISOString().split('T')[0],
+                });
                 const dd = String(time.getDate()).padStart(2, '0');
                 const mm = String(time.getMonth() + 1).padStart(2, '0');
                 const yyyy = time.getFullYear();
@@ -186,6 +192,10 @@ function Detail(props) {
               setValue={setValue}
               setItems={setItems}
               placeholder="Set a city"
+              onPress={() => {
+                setLocation(value);
+                console.log(location);
+              }}
             />
           </View>
         </View>
