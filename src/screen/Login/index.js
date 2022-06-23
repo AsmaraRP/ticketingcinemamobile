@@ -20,7 +20,6 @@ function Login(props) {
   };
   const handleLogin = async () => {
     try {
-      console.log(form);
       const result = await axios.post('auth/login', form);
       await AsyncStorage.setItem('id', result.data.data.id);
       await AsyncStorage.setItem('token', result.data.data.token);

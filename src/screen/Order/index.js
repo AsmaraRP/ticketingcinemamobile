@@ -13,6 +13,7 @@ import Footer from '../../components/Footer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styles from './styles';
 import {useSelector} from 'react-redux';
+import Notification from '../../utils/notif';
 
 function Order(props) {
   const listSeat = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
@@ -46,6 +47,7 @@ function Order(props) {
         email: email,
         userId: id,
       };
+      Notification.reminderProductNotification();
       const myJSON = JSON.stringify(dataPayment);
       props.navigation.navigate('HomeNavigator', {
         screen: 'Payment',

@@ -22,6 +22,7 @@ function Profile(props) {
   const [isError, setIsError] = useState(false);
   const [image, setImage] = useState(null);
   const [isUpload, setIsUpload] = useState(false);
+  const [filename, setFilename] = useState(null);
   const handleEdit = () => {
     setIsUpload(true);
   };
@@ -45,10 +46,22 @@ function Profile(props) {
         mediaType: 'photo',
         quality: 1,
       };
-      const data = await launchImageLibrary(option);
-      console.log(data);
-      setImage(data.assets[0]);
-      // setIsUpload(false);
+      const dataImg = await launchImageLibrary(option);
+      console.log(dataImg.assets[0]);
+      const id = await AsyncStorage.getItem('id');
+      console.log(id);
+      setImage(dataImg.assets[0]);
+      const formData = new FormData();
+      formData.append('image', {
+        uri: dataImg.assets[0].uri,
+        type: dataImg.assets[0].type,
+        name: dataImg.assets[0].fileName,
+      });
+      const result = await axios.patch(`user/image/${id}`, formData);
+      console.log(result);
+      await dispatch(getUserById(id));
+      alert('SUCCESS change photo');
+      setIsUpload(false);
     } catch (error) {
       console.log(error);
     }
@@ -83,13 +96,14 @@ function Profile(props) {
   };
   const handleEditPassword = async () => {
     try {
-      if (formPassword.confirmPassword === formPassword.newPassword) {
+      if (formPassword.confirmPassword !== formPassword.newPassword) {
         setIsError(true);
+      } else {
+        const id = await AsyncStorage.getItem('id');
+        await dispatch(updatePasswod(id, formPassword));
+        alert('SUCCESS change password');
+        setIsError(false);
       }
-      const id = await AsyncStorage.getItem('id');
-      await dispatch(updatePasswod(id, formPassword));
-      alert('SUCCESS change password');
-      setIsError(false);
     } catch (error) {
       console.log(error);
       setIsError(true);

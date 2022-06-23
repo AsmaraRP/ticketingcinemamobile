@@ -180,6 +180,7 @@ function Detail(props) {
               onCancel={() => {
                 setOpen(false);
               }}
+              minimumDate={new Date()}
             />
           </View>
           <View style={styles.sort}>

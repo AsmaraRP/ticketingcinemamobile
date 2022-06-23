@@ -42,6 +42,9 @@ function Home(props) {
       console.log(error.response);
     }
   };
+  const handleMovie = () => {
+    console.log('click');
+  };
 
   return (
     <ScrollView style={styles.main}>
@@ -75,7 +78,7 @@ function Home(props) {
                   : item.name}
               </Text>
               <Text style={styles.textCard2}>{item.category}</Text>
-              <TouchableOpacity style={styles.buttonCard}>
+              <TouchableOpacity style={styles.buttonCard} onPress={handleMovie}>
                 <Text>Detail</Text>
               </TouchableOpacity>
             </View>

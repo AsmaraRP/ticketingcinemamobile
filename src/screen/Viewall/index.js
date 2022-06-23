@@ -51,12 +51,9 @@ function Viewall(props) {
   };
   useEffect(() => {
     getdataMovie();
-    console.log(data);
-    console.log(form);
   }, [form]);
   useEffect(() => {
     getdataMovie();
-    console.log(data);
   }, []);
   const handleChangeForm = text => {
     setForm({...form, searchName: text});
