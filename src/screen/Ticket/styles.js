@@ -20,7 +20,6 @@ export default StyleSheet.create({
     fontSize: 20,
     marginTop: 15,
     marginLeft: 15,
-    marginRight: 100,
     color: 'black',
     fontWeight: 'bold',
     fontFamily: 'Mulish-Regular',
@@ -39,8 +38,13 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
   },
+  left: {
+    flex: 1,
+  },
+  right: {
+    flex: 1,
+  },
   layoutMenuTotal: {
-    borderWidth: 1,
     marginTop: 30,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -58,12 +62,11 @@ export default StyleSheet.create({
     width: '90%',
     alignItems: 'center',
   },
-  photo: {
+  box: {
     marginTop: 10,
     marginBottom: 20,
-    width: 200,
-    height: 200,
-    resizeMode: 'stretch',
+    width: 150,
+    height: 150,
   },
   cardDetail: {
     marginLeft: 20,

@@ -10,7 +10,9 @@ import {
 import Footer from '../../components/Footer';
 import styles from './styles';
 import axios from '../../utils/axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSelector, useDispatch} from 'react-redux';
+import {getDataBooking} from '../../stores/actions/ticket';
 
 function Payment(props) {
   const dispatch = useDispatch();
@@ -41,6 +43,8 @@ function Payment(props) {
       } else {
         const result = await axios.post('booking', data);
         const midtrans = result.data.data.redirectUrl;
+        const id = await AsyncStorage.getItem('id');
+        await dispatch(getDataBooking(id));
         props.navigation.navigate('HomeNavigator', {
           screen: 'Midtrans',
           params: midtrans,

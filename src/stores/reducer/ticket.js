@@ -2,13 +2,12 @@ const initialState = {
   isError: false,
   isLoading: false,
   data: [],
-  pageInfo: {},
   msg: '',
 };
 const ticket = (state = initialState, action) => {
   switch (action.type) {
     case 'GET_DATA_BOOKING_PENDING': {
-      return {...state, isLoading: true, isError: false, msg: ''};
+      return {...state, isLoading: true, isError: false};
     }
     case 'GET_DATA_BOOKING_FULFILLED': {
       return {

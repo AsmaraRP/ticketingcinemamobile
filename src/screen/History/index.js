@@ -2,29 +2,19 @@ import React from 'react';
 import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
 import Footer from '../../components/Footer';
 import styles from './styles';
-import {useEffect, useState} from 'react';
-import {useDispatch} from 'react-redux';
-import {getDataBooking} from '../../stores/actions/ticket';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useState} from 'react';
+import {useSelector} from 'react-redux';
+
 function History(props) {
-  const dispatch = useDispatch();
-  const [data, setData] = useState([]);
-  const getHistory = async () => {
-    try {
-      const id = await AsyncStorage.getItem('id');
-      const result = await dispatch(getDataBooking(id));
-      console.log(result.data.data);
-      // setData(result.data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    getHistory();
-  }, []);
-  const handleTicket = () => {
+  const ticket = useSelector(state => state.ticket.data);
+  console.log(ticket);
+  const [data, setData] = useState(ticket);
+  const handleTicket = item => {
+    // setSend(item);
+    const myJSON = JSON.stringify(item);
     props.navigation.navigate('ProfileNavigator', {
       screen: 'Ticket',
+      params: myJSON,
     });
   };
   const handleProfile = () => {
@@ -52,7 +42,6 @@ function History(props) {
         data={data}
         keyExtractor={item => item.id}
         ListHeaderComponent={ListHeader}
-        numColumns="2"
         renderItem={({item}) => (
           <View style={styles.cardHistory}>
             <Image
@@ -74,7 +63,25 @@ function History(props) {
                 item.statusUsed === 'used' ? styles.buttonUsed : styles.button
               }
               disabled={item.statusUsed === 'used' ? true : false}
-              onPress={handleTicket}>
+              onPress={() =>
+                handleTicket({
+                  name: item.name,
+                  category: item.category,
+                  date: item.dateBooking,
+                  time: item.timeBooking,
+                  seat: item.seat,
+                  total: item.totalPayment,
+                  id: item.bookingId,
+                })
+              }
+              //   // dateBooking: item.dateBooking,
+              //   // timeBooking: item.timeBooking,
+              //   // statusUsed: item.statusUsed,
+              //   // name: item.name,
+              //   // category: item.category,
+              //   // seat: item.seat,
+              //   // totalPayment: item.totalPayment,
+            >
               <Text style={styles.textButton}>
                 {item.statusUsed !== 'used'
                   ? 'Ticket in Active'

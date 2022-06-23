@@ -5,6 +5,7 @@ import styles from './styles';
 import axios from '../../utils/axios';
 import {useDispatch} from 'react-redux';
 import {getUserById} from '../../stores/actions/user';
+import {getDataBooking} from '../../stores/actions/ticket';
 
 function Login(props) {
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function Login(props) {
       await AsyncStorage.setItem('email', form.email);
       await AsyncStorage.setItem('refreshToken', result.data.data.refreshToken);
       const user = await dispatch(getUserById(result.data.data.id));
+      await dispatch(getDataBooking(result.data.data.id));
       const myJSON = JSON.stringify(user);
       await AsyncStorage.setItem('user', myJSON);
       props.navigation.navigate('AppScreen', {

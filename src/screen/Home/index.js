@@ -21,8 +21,6 @@ function Home(props) {
   useEffect(() => {
     getdataMovie();
     getdataMovie2();
-    console.log(data);
-    console.log(data2);
   }, []);
 
   const limit = 5;
@@ -32,7 +30,6 @@ function Home(props) {
     try {
       const resultMovie = await axios.get(`movie?page=1&limit=${limit}`);
       setData(resultMovie.data.data);
-      console.log(resultMovie);
     } catch (error) {
       console.log(error.response);
     }
