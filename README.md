@@ -151,6 +151,11 @@
 
 ## **Preview**
 
+![mobile1](https://user-images.githubusercontent.com/95269946/175346127-f1a56a9d-e763-4f5d-b0d5-919dadb1fedc.png)
+![mobile2](https://user-images.githubusercontent.com/95269946/175346138-5f9e8026-40f5-4b92-a810-d194455cd342.png)
+![mobile5](https://user-images.githubusercontent.com/95269946/175346153-83c53db1-9454-4382-bafe-cbb05373e897.png)
+![mobile4](https://user-images.githubusercontent.com/95269946/175346164-d76ba3e6-bdaa-4fbf-accd-87122c6388b8.png)
+![mobile3](https://user-images.githubusercontent.com/95269946/175346168-df70e878-15af-4efb-a070-f5dff0e65062.png)
 
 
 <br/>
