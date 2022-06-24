@@ -102,6 +102,10 @@ function Profile(props) {
         const id = await AsyncStorage.getItem('id');
         await dispatch(updatePasswod(id, formPassword));
         alert('SUCCESS change password');
+        setFormPassword({
+          newPassword: '',
+          confirmPassword: '',
+        });
         setIsError(false);
       }
     } catch (error) {
@@ -207,6 +211,7 @@ function Profile(props) {
           style={styles.input}
           placeholder="new password"
           secureTextEntry={true}
+          value={formPassword.newPassword}
           onChangeText={text => handleChangeFormPassword(text, 'newPassword')}
         />
         <Text style={styles.textType3}>Confirm Password</Text>
@@ -214,6 +219,7 @@ function Profile(props) {
           style={styles.input}
           placeholder="confirm password"
           secureTextEntry={true}
+          value={formPassword.confirmPassword}
           onChangeText={text =>
             handleChangeFormPassword(text, 'confirmPassword')
           }
