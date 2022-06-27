@@ -13,7 +13,7 @@
 [![redux](https://img.shields.io/npm/v/redux?label=redux)](https://redux.js.org/)
 [![redux-logger](https://img.shields.io/npm/v/redux-logger?label=redux-logger)](https://www.npmjs.com/package/redux-logger)
 [![redux-persist](https://img.shields.io/npm/v/redux-persist?label=redux-persist)](https://www.npmjs.com/package/redux-persist)
-[![redux-promise-middleware](https://img.shields.io/npm/v/redux-promise-middleware?label=redux-promise-middleware)]
+![redux-promise-middleware](https://img.shields.io/npm/v/redux-promise-middleware?label=redux-promise-middleware)
  
  ![logoTick](https://user-images.githubusercontent.com/95269946/175872940-b99f0f5f-0b43-4951-80ee-48e3fc686d60.png)
 
