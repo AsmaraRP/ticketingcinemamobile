@@ -19,7 +19,7 @@ function Forgot(props) {
     <ScrollView style={styles.main}>
       <Image
         style={styles.logo}
-        source={require('../../assets/logoblue.png')}
+        source={require('../../assets/logoTick.png')}
       />
       <Text style={styles.header}>Forgot Password</Text>
       <Text style={styles.text}>We'll send a link to your email shortly</Text>

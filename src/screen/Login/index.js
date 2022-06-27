@@ -51,7 +51,7 @@ function Login(props) {
     <View style={styles.main}>
       <Image
         style={styles.logo}
-        source={require('../../assets/logoblue.png')}
+        source={require('../../assets/logoTick.png')}
       />
       <Text style={styles.header}>Sign In</Text>
       <Text style={styles.text}>

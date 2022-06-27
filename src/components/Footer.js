@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Feather';
 export default function Footer(props) {
   return (
     <View style={styles.header}>
-      <Image style={styles.logo} source={require('../assets/logoblue.png')} />
+      <Image style={styles.logo} source={require('../assets/logoTick.png')} />
       <Text style={styles.textFooter}>
         Stop waiting in line. Buy tickets conveniently, watch movies quietly.
       </Text>
@@ -72,6 +72,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 10,
+  },
+  logo: {
+    width: 150,
+    height: 30,
+    resizeMode: 'stretch',
   },
   logoSponsor: {
     marginTop: 20,

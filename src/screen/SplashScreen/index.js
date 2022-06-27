@@ -26,7 +26,7 @@ function SplashScreen(props) {
       <View style={styles.container2}>
         <Image
           style={styles.logo}
-          source={require('../../assets/logoblue.png')}
+          source={require('../../assets/logoTick.png')}
         />
         <Text>Get your Ticket Easily</Text>
       </View>
@@ -44,6 +44,11 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: 'center',
     paddingTop: 100,
+  },
+  logo: {
+    width: 300,
+    height: 75,
+    resizeMode: 'stretch',
   },
 });
 export default SplashScreen;

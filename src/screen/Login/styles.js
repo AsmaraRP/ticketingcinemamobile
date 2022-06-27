@@ -8,6 +8,9 @@ export default StyleSheet.create({
   logo: {
     marginTop: 20,
     marginLeft: 30,
+    width: 150,
+    height: 30,
+    resizeMode: 'stretch',
   },
   header: {
     marginTop: 20,

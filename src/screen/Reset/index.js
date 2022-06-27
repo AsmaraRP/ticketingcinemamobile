@@ -19,7 +19,7 @@ function Reset(props) {
     <ScrollView style={styles.main}>
       <Image
         style={styles.logo}
-        source={require('../../assets/logoblue.png')}
+        source={require('../../assets/logoTick.png')}
       />
       <Text style={styles.header}>Set Password</Text>
       <Text style={styles.text}>Set your new password</Text>

@@ -14,7 +14,7 @@ export default function Header(props) {
   return (
     <View style={styles.header}>
       <TouchableOpacity onPress={handleHome}>
-        <Image source={require('../assets/logoblue.png')} />
+        <Image source={require('../assets/logoTick.png')} style={styles.tick} />
       </TouchableOpacity>
       <TouchableOpacity onPress={openDrawer}>
         <Image style={styles.logo} source={require('../assets/nav.png')} />
@@ -29,6 +29,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
     backgroundColor: 'white',
+  },
+  tick: {
+    marginTop: 15,
+    width: 150,
+    height: 30,
+    resizeMode: 'stretch',
   },
   logo: {
     marginTop: 15,

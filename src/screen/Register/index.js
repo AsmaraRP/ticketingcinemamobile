@@ -48,7 +48,7 @@ function Register(props) {
     <ScrollView style={styles.main}>
       <Image
         style={styles.logo}
-        source={require('../../assets/logoblue.png')}
+        source={require('../../assets/logoTick.png')}
       />
       <Text style={styles.header}>Sign Up</Text>
       <Text style={styles.text}>Fill your additional details</Text>
