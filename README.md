@@ -1,4 +1,4 @@
-# <h1 align="center">**TICKETING CINEMA - MOBILE**</h1>
+# <h1 align="center">**TICKETING CINEMA - E-TickA - MOBILE**</h1>
 
 <center>
 
@@ -10,19 +10,15 @@
 
 [![axios](https://img.shields.io/npm/v/axios?label=axios)](https://axios-http.com/docs/intro)
 [![react-redux](https://img.shields.io/npm/v/react-redux?label=react-redux)](https://react-redux.js.org/)
-[![react-router-dom](https://img.shields.io/npm/v/react-router-dom?label=react-router-dom)](https://www.npmjs.com/package/react-router-dom)
 [![redux](https://img.shields.io/npm/v/redux?label=redux)](https://redux.js.org/)
 [![redux-logger](https://img.shields.io/npm/v/redux-logger?label=redux-logger)](https://www.npmjs.com/package/redux-logger)
 [![redux-persist](https://img.shields.io/npm/v/redux-persist?label=redux-persist)](https://www.npmjs.com/package/redux-persist)
-[![redux-promise-middleware](https://img.shields.io/npm/v/redux-promise-middleware?label=redux-promise-middleware)](https://www.npmjs.com/package/redux-promise-middleware)
+[![redux-promise-middleware](https://img.shields.io/npm/v/redux-promise-middleware?label=redux-promise-middleware)]
+ 
+ ![logoTick](https://user-images.githubusercontent.com/95269946/175872940-b99f0f5f-0b43-4951-80ee-48e3fc686d60.png)
+
 
 </center>
-
-<br/>
-
-<p align="center">
-<img src="./public/images/auth/auth-logo-purple.svg" width="250"/>
-</p>
 
 <br/>
 <hr/>
@@ -98,7 +94,7 @@
 <br/>
 <hr/>
 
-## **What To Do ?**
+## **What To Do**
 
 <br/>
 
@@ -151,19 +147,13 @@
 
 ## **Preview**
 
-![mobile1](https://user-images.githubusercontent.com/95269946/175346127-f1a56a9d-e763-4f5d-b0d5-919dadb1fedc.png)
-![mobile2](https://user-images.githubusercontent.com/95269946/175346138-5f9e8026-40f5-4b92-a810-d194455cd342.png)
-![mobile5](https://user-images.githubusercontent.com/95269946/175346153-83c53db1-9454-4382-bafe-cbb05373e897.png)
-![mobile4](https://user-images.githubusercontent.com/95269946/175346164-d76ba3e6-bdaa-4fbf-accd-87122c6388b8.png)
-![mobile3](https://user-images.githubusercontent.com/95269946/175346168-df70e878-15af-4efb-a070-f5dff0e65062.png)
-
 
 <br/>
 <hr/>
 
 ## **Deploy**
 
-### **Enjoy your journey with Ticketing Cinema**
+### **Enjoy your journey with E-TickA**
 
 <br/>
 <hr/>
