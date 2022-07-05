@@ -158,8 +158,7 @@
 <hr/>
 
 ## **Built**
-link apk-release =  https://drive.google.com/file/d/1sE6pVCuXXJLCW2xP3dgX5DyZa0A6_zLe/view?usp=sharing
-
+link apk-release = bit.ly/3OGsTOk
 ### **Enjoy your journey with E-TickA**
 
 <br/>
